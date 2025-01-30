@@ -1,0 +1,310 @@
+/* Style from: 
+ * https://eggramen.neocities.org/code/css_testpages#old-site-style
+ * Backgrounds from:
+ * https://bettysgraphics.neocities.org/backgrounds
+ */
+
+body {
+    font-size: 0.875rem;
+    font-family: "Consolas", "monaco", "monospace";
+    color: #232323;
+    background-image: url("img/pattern_503.gif");
+      background-repeat: repeat;
+    background-position:left;
+      padding:0;
+      margin:0;
+    }
+    
+  center {
+    text-align:center;
+    }
+    
+  /*Some custom fun styling*/
+  h1, h2, h3 {
+    text-align:center;
+    }
+  
+  a {
+    color: #33c;
+    }
+    
+  a:visited {
+    color: #226;
+    }
+  
+  blockquote {
+    background: #dedeed;
+    color: #444;
+    font-style: italic;
+    border-left: 2px solid #445;
+    padding: 0.5em 0.5em 0.5em 1em;
+    border-radius: 0 3px 3px 0;
+    margin: 1em;
+    }
+    
+  /*Get rid to top padding on headers at the very top of a box.*/
+  .topheader {
+    margin-top: 1px;
+    }
+    
+    
+  /*Container for all major divs*/
+  .main {
+    border: 0px solid #121212;
+    position: relative;
+    height: 41rem;
+    width: 75vw;
+    margin: 2.5rem auto 1.5rem auto;
+    }
+    
+  .box {
+    position: absolute;
+    background: #ffffff;
+    display: inline-block;
+    border: 1px solid #121212;
+    padding: 10px 5px 5px 0;
+    bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 3px 3px rgba(0,0,0,0.8);
+    }
+    
+  .left, .right {
+    height: 32.5rem;
+    width: 20%;  
+    }
+    
+  .left {
+    border-radius: 25px 3px 3px 15px;
+    }
+  
+  .middle {
+    border-radius: 20px 20px 3px 3px;
+    height: 40rem;
+    width: 55%;
+    margin-left:22.25%; /*Rounds more nicely than 22.5 for some reason*/
+    }
+    
+  .right {
+    border-radius: 3px 25px 15px 3px;
+    right:0px;
+    }
+    
+  .left .scrollbox, .right .scrollbox {
+    height: 32.5rem;
+    }
+    
+  .middle .scrollbox {
+    height: 40rem;
+    }
+    
+  .scrollbox {
+    overflow:auto;
+    }
+    
+  .inner {
+    padding: 0.75rem 1.5em 0 1.5em;
+    }
+    
+  .inner img {
+    max-width: 100%;
+    height: auto;
+    }
+  
+  .footer {
+    position: absolute;
+    width: 100%;
+    color: #efefef;
+    font-size:0.9em;
+    text-align:center;
+    font-weight:bold;
+    bottom: -12rem;
+    margin: 0.5rem auto 0.75rem auto;
+    }
+    
+  
+  /*Optional sidebar links*/
+  .button-link {
+    display: block;
+    background: #b0b0c0;
+    color: #222;
+    text-decoration: none;
+    margin: 0.5em 0;
+    padding: 0.35em 0.5em;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: bold;
+    color: #002;
+    overflow-wrap: anywhere;
+    }
+    
+  .button-link:visited {
+    color: #000;
+    }
+    
+  .button-link:hover {
+    background: #c0c0d0;
+    }
+
+    .projects-head {
+        font-weight: bold;
+    }
+
+    .projects-desc {
+
+    }
+  
+    .projects-remark {
+        font-style: italic;
+        font-size: 75%;
+    }
+  
+    .bordered-image {
+        border: 2px solid black;
+    }
+
+    .wrapping-images {
+        height: auto;
+        width: 1.1rem;
+    }
+
+  /*Nicer-looking resizing for narrower screens.*/
+  @media(max-width: 1000px) {
+    .main {
+      width: 82.5vw;
+      }
+      
+    @media(max-width: 850px){
+      body {
+        font-size: 0.85rem;
+        }
+      .main {
+        height: 91vh;
+        width: 92vw;
+        margin: 7vh 5vw 1.5vh 5vw;
+        }
+      .left, .right {
+        height: 75vh;
+        width: 18.5vw;
+        }
+      .right {
+        right: 0;
+        }
+      .middle {
+        height: 90vh;
+        width: 50vw;
+        margin-left: 20.5vw;
+        }
+      .left .scrollbox, .right .scrollbox {
+        height: 75vh;
+        }
+      .middle .scrollbox {
+        height: 90vh;
+        }
+      .footer {
+        bottom: -2.5vh;
+        margin: 0.25rem auto 0.5rem auto;
+        }
+      }
+    }
+  
+  /*Resizing for horizontally shorter screens.*/
+  @media(max-height: 45rem) {
+    .main {
+      height: 91vh;
+      margin-top: 7vh;
+      margin-bottom: 1.5vh;
+      }
+    .middle {
+      height: 90vh;
+      }
+    .left, .right {
+      height: 75vh;
+      }
+    .left .scrollbox, .right .scrollbox {
+      height: 75vh;
+      }
+    .middle .scrollbox {
+      height: 90vh;
+      }
+    .inner {
+      padding-top: 0.5em;
+      }
+    .footer {
+      bottom: -2.5vh;
+      margin: 0.25rem auto 0.5rem auto;
+      }
+      
+    @media(max-height: 32.5rem) {
+      body {
+        font-size: 0.825rem;
+        }
+      .main {
+        margin-top: 10vh;
+        height: 88vh;
+        }
+      .middle {
+        height: 87vh;
+        }
+      .left, .right {
+        height: 72vh;
+        }
+      .left .scrollbox, .right .scrollbox {
+        height: 72vh;
+        }
+      .middle .scrollbox {
+        height: 87vh;
+        }
+      .inner {
+        padding-top: 0.25rem;
+        }
+      .footer {
+        bottom: -3vh;
+        }
+      }
+    }
+  
+  /*Mobile layout*/
+  @media(orientation: portrait) {
+      .main, .box, .footer {
+        position: relative;
+        display: block;
+        }
+      
+      .left, .right, .middle {
+        width: 90vw;
+        height: auto;
+        margin: 0 auto;
+        padding-right: 3px;
+        }
+      
+      .left .scrollbox, .right .scrollbox, .middle .scrollbox {
+        height: auto;
+        max-height: 100%;
+        }
+        
+      .inner {
+        padding: 0.75rem 1.5em 0.25em 1.5em;
+        }
+      
+      .left {
+        border-radius: 20px 20px 2px 2px;
+        margin: 0;
+        }
+        
+      .middle {
+        border-radius: 2px;
+        margin: 1rem 0;
+        }
+        
+      .right {
+        border-radius: 2px 2px 20px 20px;
+        margin: 0;
+        }
+        
+      .footer {
+        width: auto;
+        bottom: 0;
+        margin: 0 0 1rem 0;
+        padding: 0 1rem;
+        }
+}
